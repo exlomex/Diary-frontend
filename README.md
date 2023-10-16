@@ -1,1 +1,1 @@
-# Diary-frontend
+# Frontend for 'Diary' project
