@@ -1,14 +1,14 @@
 import React from 'react';
-import HeaderContainer from "./components/Containers/HeaderContainer";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <HeaderContainer>
-        123
-      </HeaderContainer>
+        <Navbar/>
     </>
   );
 }
 
 export default App;
+
+
