@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@500&family=Rubik:wght@400;500;600;700&display=swap');
+
+
+/* wrapper */
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* containers */
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    color: #1f1f1f;
+
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --white: #ffff;
+    --black: #1f1f1f;
+    --grey: #323232;
+    --orange: rgb(255, 92, 70);
+}

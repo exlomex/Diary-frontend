@@ -1,10 +1,15 @@
 import React from 'react';
-import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header";
+import Auth from "./pages/Auth";
+
 
 function App() {
   return (
     <>
-        <Navbar/>
+        {/*<Header/>*/}
+        <Auth/>
+
+        {/*<div style={{height: '100vh', backgroundColor: '#123'}}></div>*/}
     </>
   );
 }

@@ -1,0 +1,30 @@
+.Navbar {
+
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+}
+
+.nav_list {
+  display: flex;
+  gap: 0 32px;
+
+}
+
+.nav_link {
+  transition: color 0.3s ease;
+  color: #323232;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 150%;
+
+  &:hover {
+    color: var(--orange);
+  }
+}

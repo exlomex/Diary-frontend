@@ -1,0 +1,159 @@
+.Auth {
+  background-image: url(../../assets/image/auth_bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 1300px;
+  padding:  calc(var(--index) * 4.7) 0;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  width: 320px;
+  height: 100%;
+
+}
+
+.img_box {
+}
+
+.title {
+  color: var(--black);
+  font-size: 1.75em;
+  font-weight: 700;
+  letter-spacing: -0.84px;
+
+  margin-bottom: 35px;
+}
+
+.auth_form {
+
+}
+
+.login, .password {
+  color: var(--gree1, #323232);
+  font-size: 1em;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 25px;
+
+  input {
+    margin-top: 11px;
+    width: 320px;
+    height: 45px;
+    border-radius: 9px;
+    border: 1px solid #D6D7DD;
+    background: transparent;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0 16px;
+    transition: border 0.2s ease;
+
+    &::placeholder {
+      color: #97989C;
+    }
+
+    &:focus {
+      border: 1px solid #EF5C48;
+    }
+  }
+
+}
+
+.password {
+  position: relative;
+
+  margin-bottom: 25px;
+
+  input {
+    padding: 0 16px;
+
+    font-family: Montserrat, sans-serif;
+    letter-spacing: -0.3px;
+    font-size: 1.375em;
+  }
+
+  //&::after {
+  //  position: absolute;
+  //  content: '';
+  //  background: url(../../assets/icons/eye.svg) no-repeat 0 0 / cover;
+  //  width: 16.3px;
+  //  height: 10.7px;
+  //  right: 0;
+  //  bottom: 0;
+  //
+  //}
+}
+
+.middle_block {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 3px;
+    border: 1px solid #D6D7DD;
+
+    background: #FFF;
+    opacity: 0.2;
+
+    &:checked {
+      opacity: 1;
+    }
+
+    margin-right: 6px;
+  }
+
+
+  label {
+    color: var(--grey);
+    font-size: 0.875em;
+    font-weight: 500;
+  }
+}
+
+.forgot_pass {
+  color: var(--orange);
+  font-size: 0.875em;
+  font-weight: 500;
+
+  transition: color .3s ease;
+
+  &:hover {
+    color: #ff8876;
+  }
+}
+
+.auth_btn {
+  padding: 12px 135px;
+  border-radius: 68px;
+  background: var(--black);
+  box-shadow: 3px 2px 49px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color .3s ease;
+  display: inline-block;
+  cursor: pointer;
+
+  //  text
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #313131;
+  }
+}
