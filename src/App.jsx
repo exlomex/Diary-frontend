@@ -6,10 +6,8 @@ import Auth from "./pages/Auth";
 function App() {
   return (
     <>
-        {/*<Header/>*/}
-        <Auth/>
-
-        {/*<div style={{height: '100vh', backgroundColor: '#123'}}></div>*/}
+        <Header/>
+        {/*<Auth/>*/}
     </>
   );
 }

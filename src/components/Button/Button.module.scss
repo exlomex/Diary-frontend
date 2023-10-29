@@ -31,3 +31,53 @@
     background-color: rgba(255, 92, 70, 0.46);
   }
 }
+
+@media only screen and (max-width: 950px) {
+  .button {
+
+  }
+
+  .border_btn {
+    padding: 8px 36px;
+  }
+
+  .filling_btn {
+    font-size: 1.2rem;
+    padding: 10px 59px;
+
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .button {
+
+  }
+
+  .border_btn {
+    padding: 6px 40px;
+  }
+
+  .filling_btn {
+    font-size: 0.8rem;
+    padding: 6px 40px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  .button {
+
+  }
+
+  .border_btn {
+    font-size: 0.7rem;
+    padding: 4px 36px;
+  }
+
+  .filling_btn {
+    font-size: 0.7rem;
+    padding: 4px 40px;
+  }
+
+}
