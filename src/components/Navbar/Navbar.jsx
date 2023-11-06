@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
+
+
 import styles from './Navbar.module.scss'
+import {MainContainer} from "../Containers";
+import {Button} from "../ui";
+import {BurgerMenu} from "../BurgerMenu";
 
 import logo from '../../assets/Diary.svg'
-import Button from "../Button";
-import Burger from "../Burger";
+
 import useWindowSize from "../../hooks/useWindowSize";
 
 const Navbar = () => {
@@ -11,7 +15,7 @@ const Navbar = () => {
 
     return (
         <div className={styles.Navbar}>
-            <div className="container">
+            <MainContainer>
                 <div className={styles.inner}>
                     <a
                         href={'#'}
@@ -35,11 +39,9 @@ const Navbar = () => {
                             </nav>
                             <Button className={'border_btn'}/>
                         </>
-                    ) : <Burger/>
-                    }
-
+                    ) : <BurgerMenu/>}
                 </div>
-            </div>
+            </MainContainer>
         </div>
     );
 };

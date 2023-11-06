@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
-import Navbar from "../Navbar/Navbar";
+import React from 'react';
+import {Navbar} from "../Navbar";
+import {MainContainer} from "../Containers";
+import {Button} from "../ui";
+
 import styles from './Header.module.scss'
 
 import header_img from '../../assets/image/header_content_bg.svg'
-import Button from "../Button";
 
 const Header = () => {
     return (
         <header className={styles.Header}>
             <Navbar/>
-            <div className='container'>
+            <MainContainer>
                 <div className={styles.body_inner}>
                     <div className={styles.content}>
                         <div className={styles.heading}>
@@ -29,7 +31,8 @@ const Header = () => {
                         <img src={header_img} alt=""/>
                     </div>
                 </div>
-            </div>
+            </MainContainer>
+
         </header>
 
     );

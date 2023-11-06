@@ -4,7 +4,9 @@ import styles from './Button.module.scss'
 const Button = (props) => {
 
     return (
-        <a href={'#'} className={`${ styles.button } ${ styles[props.className] }`}>
+        <a
+            href={'#'}
+            className={`${ styles.button } ${ styles[props.className] }`}>
             Войти
         </a>
 

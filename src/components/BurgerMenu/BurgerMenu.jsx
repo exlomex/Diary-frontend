@@ -1,11 +1,11 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
-import styles from './Burger.module.scss'
+import React, {useEffect, useState} from 'react';
+import styles from './BurgerMenu.module.scss'
 
-const Burger = () => {
+const BurgerMenu = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
+        setIsMenuOpen(!isMenuOpen);
     };
 
     useEffect(() => {
@@ -21,18 +21,19 @@ const Burger = () => {
     }, [isMenuOpen])
     return (
         <>
-            <label
-                className={styles.burger}
-            >
+            <label className={styles.burger}>
                 <input
                     type="checkbox"
                     onClick={toggleMenu}/>
+
                 <div className={styles.burger__main}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+
             </label>
+
             <div className={`${styles.menuItems} ${isMenuOpen ? styles['burger--visible'] : ''}`}>
                     <nav className={styles.nav}>
                         <ul className={styles.list}>
@@ -48,4 +49,4 @@ const Burger = () => {
     );
 };
 
-export default Burger;
+export default BurgerMenu;
