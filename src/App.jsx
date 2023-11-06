@@ -1,17 +1,18 @@
 import React from 'react';
-import Header from "./components/Header";
-import Auth from "./pages/Auth";
+import MainPage from "./pages/MainPage/MainPage";
+import AuthPage from "./pages/AuthPage";
+import {Provider} from "react-redux";
+import store from "./store/store";
 
 
 function App() {
   return (
-    <>
-        <Header/>
-        {/*<Auth/>*/}
-    </>
+      <Provider store={store}>
+          {/*<MainPage/>*/}
+          <AuthPage/>
+      </Provider>
   );
 }
 
 export default App;
-
 

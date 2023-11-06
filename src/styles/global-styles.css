@@ -9,14 +9,6 @@
     overflow: hidden;
 }
 
-/* containers */
-
-.container {
-    max-width: 1270px;
-    margin: 0 auto;
-    padding: 0 var(--content-padding);
-}
-
 body {
     background-color: var(--white);
     font-family: 'Manrope', sans-serif;
