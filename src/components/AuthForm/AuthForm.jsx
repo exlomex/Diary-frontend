@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import { useDispatch } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import styles from './AuthForm.module.scss'
 import {PiEye, PiEyeSlash} from "react-icons/pi";
 import {BsCheck} from "react-icons/bs";
-import {loginUser} from "../../slices/AuthSlice";
+import {loginUser, selectIsAuth, selectUserRole} from "../../slices/AuthSlice";
 
 const AuthForm = () => {
     const dispatch = useDispatch();
@@ -28,8 +28,7 @@ const AuthForm = () => {
         e.preventDefault();
         loginUser(credentials, dispatch)
     }
-
-
+    // console.log(useSelector(selectIsAuth), useSelector(selectUserRole))
     return (
         <form className={styles.auth_form}>
             <label htmlFor="" className={styles.login}>
@@ -53,7 +52,6 @@ const AuthForm = () => {
                         className={styles.password__input}
                         name={'password'}
                         type={showPass ? 'text' : 'password'}
-                        placeholder=''
                         value={credentials.password}
                         onChange={handleInputChange}
                     />

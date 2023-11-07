@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import AuthService from '../services/AuthService';
+import {jwtDecode} from 'jwt-decode'
+import axios from "axios";
+import {API_URL} from "../http";
 
 const initialState = {
     userRole: null,
@@ -34,10 +37,27 @@ export const loginUser = async (credentials, dispatch) => {
         const response = await AuthService.authenticate(credentials);
 
         const { accessToken } = response.data;
-
         localStorage.setItem('token', accessToken)
 
         dispatch(setAuth('True'));
+        dispatch(setUserRole(jwtDecode(accessToken)['roles'][0]))
+
+    } catch (error) {
+        console.error('Login failed:', error.data?.message);
+    }
+};
+
+export const checkAuth = async (dispatch) => {
+    try {
+        console.log(123)
+        // const response = await axios.get(`${API_URL}/auth/refresh`, {withCredentials: true});
+        // console.log(response)
+        // const { accessToken } = response.data;
+        // localStorage.setItem('token', accessToken)
+        //
+        // dispatch(setAuth('True'));
+        // dispatch(setUserRole(jwtDecode(accessToken)['roles'][0]))
+
     } catch (error) {
         console.error('Login failed:', error);
     }
@@ -54,13 +74,11 @@ export const loginUser = async (credentials, dispatch) => {
 //     }
 // };
 //
-// export const userLogout = () => (dispatch) => {
-//     // Remove token from local storage
-//     localStorage.removeItem('token');
-//
-//     dispatch(logout());
-// };
+export const userLogout = () => (dispatch) => {
+    localStorage.removeItem('token');
+    dispatch(logout());
+};
 
-export const selectUserRole = (state) => state.auth.userRole;
-export const selectIsAuth = (state) => state.auth.isAuth;
+export const selectUserRole = (state) => state.userRole;
+export const selectIsAuth = (state) => state.isAuth;
 export default authSlice.reducer;
