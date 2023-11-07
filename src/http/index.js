@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const BASE_URL = `http://localhost:8080/diary/api/v1`
+export const API_URL = `http://localhost:8080/diary/api/v1`
 
 const $api = axios.create({
-    // withCredentials: true,
-    baseURL: BASE_URL
+    withCredentials: true,
+    baseURL: API_URL
 })
 
 $api.interceptors.request.use((config) => {
@@ -12,9 +12,9 @@ $api.interceptors.request.use((config) => {
     return config;
 })
 
-$api.interceptors.request.use((config) => {
-    config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
-    return config;
-})
+// $api.interceptors.request.use((config) => {
+//     config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+//     return config;
+// })
 
 export default $api;

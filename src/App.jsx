@@ -1,16 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MainPage from "./pages/MainPage/MainPage";
 import AuthPage from "./pages/AuthPage";
-import {Provider} from "react-redux";
-import store from "./store/store";
+import {checkAuth} from "./slices/AuthSlice";
+import {useDispatch} from "react-redux";
 
 
 function App() {
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            checkAuth(dispatch)
+        }
+
+    }, []);
+
   return (
-      <Provider store={store}>
+      <>
           {/*<MainPage/>*/}
           <AuthPage/>
-      </Provider>
+      </>
+
   );
 }
 

@@ -1,10 +1,9 @@
 import $api from '../http/index';
-import axios from "axios";
 
 const AuthService = {
     authenticate: async (credentials) => {
         console.log(credentials)
-        return axios.post('http://localhost:8080/diary/api/v1/auth/authenticate', credentials );
+        return $api.post('/auth/authenticate', credentials );
     },
 
     // register: async (... , ...) => {
